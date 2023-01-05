@@ -7,7 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
+User.create(email: "veronika@example.com", password: "password", password_confirmation: "password")
+
 5.times do |x|
 
-    Entry.create(name: "Jane Doe", title: "Téma sezení", session: "#{x}", body: "Záznam ze sezení číslo #{x}.")
+    Entry.create(name: "Jane Doe", title: "Téma sezení", session: "#{x}", body: "Záznam ze sezení číslo #{x}.", user_id: User.first.id)
 end
