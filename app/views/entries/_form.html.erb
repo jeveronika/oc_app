@@ -1,0 +1,37 @@
+<%= form_with(model: entry) do |form| %>
+  <% if entry.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+        <% entry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block", value: "Jméno klienta:" %>
+    <%= form.text_field :name, placeholder: "jméno a příjmení", class:"input-entry" %>
+  </div>
+<br>
+  <div>
+    <%= form.label :title, style: "display: block", value: "Téma sezení:" %>
+    <%= form.text_field :title, placeholder: "o čem bylo sezení", class:"input-entry" %>
+  </div>
+<br>
+  <div>
+    <%= form.label :session, style: "display: block", value: "Sezení číslo:" %>
+    <%= form.number_field :session, class:"input-entry" %>
+  </div>
+<br>
+  <div>
+    <%= form.label :body, style: "display: block", value: "Záznam ze sezení:" %>
+    <%= form.text_area :body, placeholder: "záznam ze sezení", class:"input-entry-textarea container" %>
+  </div>
+
+  <div>
+    <%= form.submit value: "Zapsat", class: "btn btn-primary" %>
+  </div>
+<% end %>

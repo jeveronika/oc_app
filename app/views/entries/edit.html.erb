@@ -1,0 +1,13 @@
+<div class="container">
+<br>
+<h1>Upravit zápis</h1>
+<p>V této části můžete upravit zápis z vašeho sezení s klientem:</p>
+<%= render "form", entry: @entry %>
+
+<br>
+
+<div class="text-end">
+  <%= link_to "Ukázat zápis", @entry, class: "btn btn-success" %> |
+  <%= link_to "Zpět na všechny zápisy", entries_path, class: "btn btn-warning" %>
+</div>
+</div>

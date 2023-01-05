@@ -14,11 +14,27 @@
  *= require_self
  */
 
+ .input-entry-textarea {
+    border: 1px solid rgb(0, 83, 190);
+    border-radius: 3px;
+    padding: 10px 15px;
+    font-size: 15px;
+    margin: 5px 0px;
+}
 
+.input-entry {
+    border: 1px solid rgb(0, 83, 190);
+    border-radius: 3px;
+    padding: 10px 15px;
+    font-size: 15px;
+    margin: 5px 0px;
+}
 
+.entries {
+    padding-bottom: 15px;
+}
 
-
- .footer-link {
+.footer-link {
     text-decoration: none;
     color: rgb(141, 152, 167);
 }
@@ -40,4 +56,8 @@
 .main-link:hover {
     text-decoration: none;
     color: rgb(70, 105, 154);
+}
+
+footer {
+    margin-top: 15px;
 }

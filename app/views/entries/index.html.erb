@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+<h1>Zápisky ze sezení</h1>
+
+<p>V této části najdete všechny zápisy z klientských sezení.</p>
+<p class="entries text-end"> <%= link_to "Vytvořit nový zápis", new_entry_path, class: "btn btn-warning" %> <br></p>
+
+
+
+<div id="entries">
+  <% @entries.each do |entry| %>
+    <%= render entry %>
+    <p class="entries text-end">
+      <%= link_to "Otevřít zápis", entry, class: "btn btn-success" %>
+    </p>
+  <% end %>
+</div>
+
+
+
+</div>
