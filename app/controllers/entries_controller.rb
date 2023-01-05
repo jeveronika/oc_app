@@ -8,6 +8,7 @@ class EntriesController < ApplicationController
 
   # GET /entries/1 or /entries/1.json
   def show
+    @entry.update(views: @entry.views + 1)
   end
 
   # GET /entries/new
