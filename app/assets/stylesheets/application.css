@@ -61,3 +61,9 @@
 footer {
     margin-top: 15px;
 }
+
+
+.bg-custom-login {
+    background: #ffffff;
+    border-radius: 3px;
+}

@@ -1,17 +1,23 @@
-<p style="color: green"><%= notice %></p>
-<div class="container">
-<br>
-<%= render @entry %>
-<br>
-<div>
-  <%= link_to "Upravit zápis", edit_entry_path(@entry), class: "btn btn-success" %> |
-  <%= link_to "Zpět na všechny zápisy", entries_path, class: "btn btn-warning" %>
-<br><br>
+<div class="position-relative overflow-hidden p-5 p-md-5 m-md-3 bg-light">
+  <div class="col-md-50 p-lg-5 mx-auto my-5 bg-custom-login">
 
-<div class="alert alert-danger text-end" role="alert">
-  <p>Chcete odstranit zápis? </p>
-  <p>POZOR, tato akce je nevratná.</p>
-  <%= button_to "Trvale smazat zápis", @entry, method: :delete, class: "btn btn-danger btn-end" %>
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-9">
+      <%= render @entry %>
+      <%= link_to "Upravit zápis", edit_entry_path(@entry), class: "btn btn-success" %>
+    </div>
+    <div class="col-3">
+      
+      <%= link_to "Zpět na zápisy", entries_path, class: "btn btn-warning" %><br><br>
+      <%= button_to "Trvale smazat", @entry, method: :delete, class: "btn btn-danger" %>
+    </div>
+
+
+  </div>
 </div>
 
 </div>
