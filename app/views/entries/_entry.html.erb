@@ -21,6 +21,6 @@
     <%= entry.body %>
   </p>
   <p>počet zobrazení: <%= entry.views %></p>
-  <p>vytvořeno uživatelem <%= entry.user.email %></p>
+  <p>vytvořeno uživatelem <%= link_to entry.user.name, user_path(entry.user) %></p>
 
 </div>

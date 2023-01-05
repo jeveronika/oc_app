@@ -8,7 +8,7 @@
         <li><%= link_to "Nový zápis", new_entry_path, class:"dropdown-item" %> </li>
         <li><%= link_to "Všechny zápisy", entries_path, class:"dropdown-item" %> </li>
         <li><hr class="dropdown-divider"></li>
-        <li><%= link_to "Zobrazit profil", root_path, class:"dropdown-item" %> </li>
+        <li><%= link_to "Zobrazit profil", current_user, class:"dropdown-item" %> </li>
         <li><%= link_to "Upravit profil", edit_user_registration_path, class:"dropdown-item" %> </li>
         <li><hr class="dropdown-divider"></li>
         <li><%= button_to "Odhlásit se", destroy_user_session_path, method: :delete, class:"dropdown-item"%></li>
