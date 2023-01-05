@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+
+ .footer-link {
+    text-decoration: none;
+    color: rgb(141, 152, 167);
+}
+
+.footer-link:hover {
+    text-decoration: none;
+    color: rgb(70, 105, 154);
+}
+
+.footer-text {
+    color: #ffffff;
+}
+
+.main-link {
+    text-decoration: none;
+    color: rgb(12, 55, 116);
+}
+
+.main-link:hover {
+    text-decoration: none;
+    color: rgb(70, 105, 154);
+}
