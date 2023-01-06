@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# O aplikaci OnlineCoach
 
-Things you may want to cover:
+Demo aplikace pro kouče, kteří si chtějí vést zápisky ze 
+sezení s klienty online
 
-* Ruby version
+Jak aplikace funguje:
 
-* System dependencies
+* pouze pro registrované či přihlášené uživatele
 
-* Configuration
+* jednoduchá registrace či přihlášení v hlavní nabídce
 
-* Database creation
+* po přihlášení či registraci možnost vést si vlastní zápisky
 
-* Database initialization
+* uživatelé mezi sebou nemohou navzájem vidět a sdílet zápisky (diskrétnost vůči klientům)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* nepřihlášení návštěvníci si nemohou zápisky prohlížet
