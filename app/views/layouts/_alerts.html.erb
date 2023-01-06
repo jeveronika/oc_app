@@ -1,7 +1,15 @@
 <% if notice %>
-<p class="notice"><%= notice %></p>
+<div class="container">
+<div class="alert alert-info" role="alert">
+<%= notice %>
+</div>
+</div>
 
 <% elsif alert %>
-<p class="alert"><%= alert %></p>
+<div class="container">
+<div class="alert alert-danger" role="alert">
+<%= alert %>
+</div>
+</div>
 
 <% end %>
