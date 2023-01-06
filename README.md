@@ -15,4 +15,4 @@ Jak aplikace funguje:
 
 * uživatelé mezi sebou nemohou navzájem vidět a sdílet zápisky (diskrétnost vůči klientům)
 
-* nepřihlášení návštěvníci si nemohou zápisky prohlížet
+* nepřihlášení návštěvníci si nemohou zápisky prohlížet ani je vytvářet
