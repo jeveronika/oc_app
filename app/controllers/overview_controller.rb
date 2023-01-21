@@ -7,6 +7,8 @@ class OverviewController < ApplicationController
     def index
         @entries = Entry.where(user_id: current_user.id)
         statistics
+        statistics_clients
+        
     end
 
     def statistics
@@ -16,7 +18,14 @@ class OverviewController < ApplicationController
         @median_length = @entries.median(&:length)
         @longest_entry = @entries.maximum(:length)
         @shortest_entry = @entries.minimum(:length)
-      end
+    end
+
+    def statistics_clients
+        @entries = Entry.where(user_id: current_user.id)
+        @entries_by_name = Entry.all.group_by(&:name)
+    end
+      
+
       
     
 end

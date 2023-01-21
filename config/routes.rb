@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get "/overview", to: "overview#index"
 
+  
+
   resources :entries
 
   get "about", to: "pages#about"

@@ -3,51 +3,13 @@
 
 
 
-<h3>Statistiky uživatele <%= current_user.name %>:</h3><br>
-<p>Celkový počet sezení: <%= @entries_summary %></p>
-<p>Průměrná délka v minutách: <%= @average_length %></p>
-<p>Medián: <%= @median_length %></p>
-<p>Nejdelší sezení: <%= @longest_entry %></p>
-<p>Nejkratší sezení: <%= @shortest_entry %></p>
-
+<%= render "overview/overview_all" %>
 
 <br><br>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Klient</th>
-      <th scope="col">Průměr</th>
-      <th scope="col">Medián</th>
-      <th scope="col">Nejdelší</th>
-      <th scope="col">Nejkratší</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+<%= render "overview/overview_clients" %>
 
-<br><br>
+
 
 
 

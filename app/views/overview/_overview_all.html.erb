@@ -1,0 +1,23 @@
+<h3>Celkové statistiky uživatele <%= current_user.name %>:</h3><br>
+
+<table class="table text-center">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">Celkový počet sezení:</th>
+      <th scope="col">Průměrná délka v minutách:</th>
+      <th scope="col">Medián:</th>
+      <th scope="col">Nejdelší sezení:</th>
+      <th scope="col">Nejkratší sezení:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @entries_summary %></td>
+      <td><%= @average_length %></td>
+      <td><%= @median_length %></td>
+      <td><%= @longest_entry %></td>
+      <td><%= @shortest_entry %></td>
+    </tr>
+    
+  </tbody>
+</table>

@@ -1,6 +1,7 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: %i[ show edit update destroy ]
   before_action :authenticate_user!#, except: %i[ show index ]
+  
 
   # GET /entries or /entries.json
   def index
@@ -10,6 +11,7 @@ class EntriesController < ApplicationController
   # GET /entries/1 or /entries/1.json
   def show
     @entry.update(views: @entry.views + 1)
+    
   end
 
   # GET /entries/new
@@ -70,6 +72,8 @@ class EntriesController < ApplicationController
     def entry_params
       params.require(:entry).permit(:name, :title, :session, :body, :length)
     end
+
+    
 
    
 
