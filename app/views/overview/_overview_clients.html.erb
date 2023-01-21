@@ -1,6 +1,6 @@
 <h3>Statistiky jednotlivých klientů:</h3><br>
 
-
+<% if current_user %>
 <table class="table">
   <thead>
     <tr class="table-secondary text-center">
@@ -25,3 +25,5 @@
     <% end %>
   </tbody>
 </table>
+
+<% end %>

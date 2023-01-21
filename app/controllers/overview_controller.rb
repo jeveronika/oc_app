@@ -11,6 +11,8 @@ class OverviewController < ApplicationController
         
     end
 
+    private
+
     def statistics
         @entries = Entry.where(user_id: current_user.id)
         @entries_summary = @entries.count(:length)
@@ -21,10 +23,10 @@ class OverviewController < ApplicationController
     end
 
     def statistics_clients
-        @entries = Entry.where(user_id: current_user.id)
-        @entries_by_name = Entry.all.group_by(&:name)
+        @entries_by_name = Entry.where(user_id: current_user.id).all.group_by(&:name)
     end
       
+
 
       
     
