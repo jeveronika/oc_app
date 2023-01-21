@@ -46,8 +46,6 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    active_median (0.3.3)
-      activesupport (>= 5.2)
     activejob (7.0.4.1)
       activesupport (= 7.0.4.1)
       globalid (>= 0.3.6)
@@ -225,7 +223,6 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
-  active_median
   bootsnap
   capybara
   debug

@@ -3,11 +3,14 @@
 
 
 
-<h3>Statistika uživatele <%= current_user.name %>:</h3><br>
-<p>Průměrná délka sezení: <%= @average_length %> minut</p>
+<h3>Statistiky uživatele <%= current_user.name %>:</h3><br>
+<p>Celkový počet sezení: <%= @entries_summary %></p>
+<p>Průměrná délka v minutách: <%= @average_length %></p>
 <p>Medián: </p>
-<p>Nejelší sezení: <%= @longest_entry %> minut </p>
-<p>Nejkratší sezení: <%= @shortest_entry %> minut</p>
+<p>Nejdelší sezení: <%= @longest_entry %></p>
+<p>Nejkratší sezení: <%= @shortest_entry %></p>
+
+
 <br><br>
 
 <table class="table">

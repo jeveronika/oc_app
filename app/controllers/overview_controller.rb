@@ -6,6 +6,7 @@ class OverviewController < ApplicationController
 
     def statistics
         @entries = Entry.where(user_id: current_user.id)
+        @entries_summary = @entries.count(:length)
         @average_length = @entries.average(:length)
         # @median_length = @entries.median(:length)
         @longest_entry = @entries.maximum(:length)
