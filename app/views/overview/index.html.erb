@@ -4,10 +4,10 @@
 
 
 <h3>Statistika uživatele <%= current_user.name %>:</h3><br>
-<p>Průměrná délka sezení: </p>
+<p>Průměrná délka sezení: <%= @average_length %> minut</p>
 <p>Medián: </p>
-<p>Nejelší sezení: </p>
-<p>Nejkratší sezení: </p>
+<p>Nejelší sezení: <%= @longest_entry %> minut </p>
+<p>Nejkratší sezení: <%= @shortest_entry %> minut</p>
 <br><br>
 
 <table class="table">
