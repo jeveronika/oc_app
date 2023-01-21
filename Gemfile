@@ -74,4 +74,5 @@ end
 gem "devise"
 
 
+gem "simple_stats"
 
