@@ -19,6 +19,7 @@
 
 <div>
     <%= form.label :length, value: "Vyberte délku sezení:" %>
+      <br>
     <%= form.select :length, options_for_select([["15 minut", 15], ["30 minut", 30], ["45 minut", 45], ["60 minut", 60], ["90 minut", 90], ["120 minut", 120]], selected: @entry.length) %>
 </div>
 
