@@ -1,4 +1,6 @@
 class Entry < ApplicationRecord
+    # include ActiveRecord::Calculations
+
     validates :name, presence: true
     validates :title, presence: true
     validates :body, presence: true
@@ -10,9 +12,6 @@ class Entry < ApplicationRecord
 
 
     belongs_to :user
-
-
-  
 
     
 end

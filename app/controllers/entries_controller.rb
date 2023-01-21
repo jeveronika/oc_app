@@ -5,7 +5,6 @@ class EntriesController < ApplicationController
   # GET /entries or /entries.json
   def index
     @entries = Entry.where(user_id: current_user.id).order(created_at: :desc)
-
   end
 
   # GET /entries/1 or /entries/1.json
@@ -72,5 +71,6 @@ class EntriesController < ApplicationController
       params.require(:entry).permit(:name, :title, :session, :body, :length)
     end
 
+   
 
 end

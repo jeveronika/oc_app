@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   }
   get "/u/:id", to: "users#profile", as: "user"
 
+  get "/overview", to: "overview#index"
 
   resources :entries
 
