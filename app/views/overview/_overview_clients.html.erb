@@ -5,6 +5,7 @@
   <thead>
     <tr class="table-secondary text-center">
       <th>Jméno:</th>
+      <th>Počet:</th>
       <th>Celkem minut:</th>
       <th>Průměrná délka:</th>
       <th>Medián:</th>
@@ -16,6 +17,7 @@
     <% @entries_by_name.each do |name, entries| %>
       <tr>
         <td><%= name %></td>
+        <td><%= entries.map(&:length).count %></td>
         <td><%= entries.map(&:length).sum %></td>
         <td><%= entries.map(&:length).sum.fdiv(entries.count) %></td>
         <td><%= entries.sort_by(&:length)[entries.count / 2].length %></td>
