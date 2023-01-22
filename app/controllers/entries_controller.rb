@@ -1,6 +1,8 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: %i[ show edit update destroy ]
   before_action :authenticate_user!#, except: %i[ show index ]
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+
   
 
   # GET /entries or /entries.json
@@ -73,6 +75,9 @@ class EntriesController < ApplicationController
       params.require(:entry).permit(:name, :title, :session, :body, :length)
     end
 
+    def record_not_found
+      redirect_to entries_path, notice: "Záznam nenalezen"
+    end
     
 
    
