@@ -13,7 +13,7 @@
 <div id="entries">
   <% @entries.each do |entry| %>
     <%= render entry %>
-    <p class="entries text-end">
+    <p class="entries">
       <%= link_to "Otevřít zápis", entry, class: "btn btn-success" %>
     </p>
   <% end %>
