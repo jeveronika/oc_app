@@ -15,7 +15,7 @@
   </thead>
   <tbody class="text-center">
     <% @entries_by_name.each do |name, entries| %>
-      <tr>
+      <tr class="<%= 'font-weight-bold' if name == @max_duration_client_name %>">
         <td><%= name %></td>
         <td><%= entries.map(&:length).count %></td>
         <td><%= entries.map(&:length).sum %></td>
@@ -29,3 +29,4 @@
 </table>
 
 <% end %>
+

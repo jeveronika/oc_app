@@ -20,6 +20,9 @@ class OverviewController < ApplicationController
         @median_length = @entries.median(&:length)
         @longest_entry = @entries.maximum(:length)
         @shortest_entry = @entries.minimum(:length)
+        
+        @entries_by_name = current_user.entries.group_by(&:name)
+        @max_duration_client_name = @entries_by_name.max_by{|name, entries| entries.map(&:length).sum}.first
     end
 
     def statistics_clients
